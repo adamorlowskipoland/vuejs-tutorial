@@ -10,21 +10,19 @@
   <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
+
   <div id="vue-app">
     <h1>
-      Data Binding
+      Events
     </h1>
-    <!--<a v-bind:href="website">-->
-      <a :href="website"> <!-- the same as above -->
-      The Net Ninja
-    </a>
-    <input type="text" v-bind:value="name">
-
-
-    <p v-html="websiteTag"></p>
-        <p>
-      {{ websiteTag }}
+    <button @click="add(1)">Add a Year</button>
+    <button v-on:click="substract(1)">Substract a Year</button>
+    <button @dblclick="add(10)">Add 10 Years</button>
+    <button v-on:dblclick="substract(10)">Substract 10 Years</button>
+    <p>
+      My age is {{ age }}
     </p>
+    <div id="canvas" v-on:mousemove="updateXY">X = {{ x }}, Y = {{ y }}</div>
   </div>
 
   <script src="app.js"></script>
