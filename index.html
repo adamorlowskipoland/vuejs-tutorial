@@ -11,22 +11,14 @@
 </head>
 <body>
 
-<!--  Event modifires -->
+<!--  Keyboard events -->
+<!--  https://vuejs.org/v2/guide/events.html  -->
   <div id="vue-app">
-    <h1>
-      Events
-    </h1>
-    <button @click.once="add(1)">Add a Year</button>  <!--  once means you can click it only once -->
-    <button v-on:click="substract(1)">Substract a Year</button> <!--  the same as above -->
-    <button @dblclick="add(10)">Add 10 Years</button>
-    <button v-on:dblclick="substract(10)">Substract 10 Years</button>
-    <p>
-      My age is {{ age }}
-    </p>
-    <div id="canvas"
-         v-on:mousemove="updateXY">X = {{ x }}, Y = {{ y }}</div>
-    <a @click.prevent="click"
-       href="http://wwww.thenetnincja.co.uk">The Net Ninja</a> <!--  prevent is preventDefault -->
+    <h1>Keybboard Events</h1>
+    <label>Name:</label>
+    <input @keyup.enter="logName">  <!-- added modifier to fire on 'enter'  -->
+    <label>Age:</label>
+    <input @keyup.alt.enter="logAge"> <!-- here you need to press 'alt' && 'enter' -->
   </div>
 
   <script src="app.js"></script>
