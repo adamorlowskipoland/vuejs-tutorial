@@ -12,13 +12,18 @@
 <body>
   <div id="vue-app">
     <h1>
-      {{ greet('night') }}
+      Data Binding
     </h1>
-    <p>
-      Name: {{ name }}
-    </p>
-    <p>
-      Job: {{ job }}
+    <!--<a v-bind:href="website">-->
+      <a :href="website"> <!-- the same as above -->
+      The Net Ninja
+    </a>
+    <input type="text" v-bind:value="name">
+
+
+    <p v-html="websiteTag"></p>
+        <p>
+      {{ websiteTag }}
     </p>
   </div>
 
