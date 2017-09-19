@@ -15,6 +15,9 @@ new Vue({
     updateXY (event) {
       this.x = event.offsetX;
       this.y = event.offsetY;
+    },
+    click () {
+      console.log('You clicked a link');
     }
   }
 });
