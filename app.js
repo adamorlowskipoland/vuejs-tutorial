@@ -1,36 +1,13 @@
-new Vue({
+new Vue ({
   el: '#vue-app',
   data: {
-    age: 30,
-    a: 0,
-    b: 0
+    available: false,
+    nearby: false
   },
   methods: {
-    // addToA () {
-    //   console.log('addToA run');
-    //   return this.a + this.age;
-    // },
-    // addToB () {
-    //   console.log('addToB run');
-    //   return this.b + this.age;
-    // }
-
-//  even after clicking only one button (one function fired) both functions runs
-//  check that out in the console
-//  that's way it's better to run this by computed - below
 
   },
   computed: {
-    addToA () {
-      console.log('addToA run');
-      return this.a + this.age;
-    },
-    addToB () {
-      console.log('addToB run');
-      return this.b + this.age;
-    }
+
   }
 });
-
-//  With computed only fired function runs
-//  remember to take out pareties in HTML
