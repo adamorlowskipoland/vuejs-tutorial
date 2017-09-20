@@ -11,18 +11,13 @@
 </head>
 <body>
 
-<!--  Keyboard events -->
-<!--  https://vuejs.org/v2/guide/events.html  -->
   <div id="vue-app">
-    <h1>Keybboard Events</h1>
-    <label>Name:</label>
-    <input v-model="name">  <!-- added modifier to fire on 'enter'  -->
-    <span>{{ name }}</span>
-    <br>
-    <br>
-    <label>Age:</label>
-    <input v-model="age"> <!-- here you need to press 'alt' && 'enter' -->
-    <span>{{ age }}</span>
+
+    <h1>Computed Properties</h1>
+    <button @click="a++">Add 1 to A</button>
+    <button @click="b++">Add 1 to B</button>
+    <p>A: {{ a }}</p>
+    <p>B: {{ b }}</p>
   </div>
 
   <script src="app.js"></script>

@@ -1,15 +1,11 @@
 new Vue({
   el: '#vue-app',
   data: {
-    name: '',
-    age: ''
+    age: 30,
+    a: 0,
+    b: 0
   },
   methods: {
-    logName () {
-      console.log('You entered your name');
-    },
-    logAge () {
-      console.log('You entered your age');
-    }
+
   }
 });
