@@ -15,9 +15,11 @@
 
     <h1>Computed Properties</h1>
     <button @click="a++">Add 1 to A</button>
-    <button @click="b++">Add 1 to B</button>
+    <button v-on:click="b++">Add 1 to B</button>
     <p>A: {{ a }}</p>
     <p>B: {{ b }}</p>
+    <p>Age + A = {{ addToA() }}</p>
+    <p>Age + B = {{ addToB() }}</p>
   </div>
 
   <script src="app.js"></script>
