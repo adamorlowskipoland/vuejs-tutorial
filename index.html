@@ -16,9 +16,13 @@
   <div id="vue-app">
     <h1>Keybboard Events</h1>
     <label>Name:</label>
-    <input @keyup.enter="logName">  <!-- added modifier to fire on 'enter'  -->
+    <input v-model="name">  <!-- added modifier to fire on 'enter'  -->
+    <span>{{ name }}</span>
+    <br>
+    <br>
     <label>Age:</label>
-    <input @keyup.alt.enter="logAge"> <!-- here you need to press 'alt' && 'enter' -->
+    <input v-model="age"> <!-- here you need to press 'alt' && 'enter' -->
+    <span>{{ age }}</span>
   </div>
 
   <script src="app.js"></script>
