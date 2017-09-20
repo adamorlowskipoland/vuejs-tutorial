@@ -6,6 +6,21 @@ new Vue({
     b: 0
   },
   methods: {
+    // addToA () {
+    //   console.log('addToA run');
+    //   return this.a + this.age;
+    // },
+    // addToB () {
+    //   console.log('addToB run');
+    //   return this.b + this.age;
+    // }
+
+//  even after clicking only one button (one function fired) both functions runs
+//  check that out in the console
+//  that's way it's better to run this by computed - below
+
+  },
+  computed: {
     addToA () {
       console.log('addToA run');
       return this.a + this.age;
@@ -17,5 +32,5 @@ new Vue({
   }
 });
 
-//  even after clicking only one button (one function fired) both functions runs
-//  check that out in the console
+//  With computed only fired function runs
+//  remember to take out pareties in HTML
