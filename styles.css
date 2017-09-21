@@ -4,6 +4,9 @@
   margin: 0 auto;
   background: url("imgs/bag.png") no-repeat center / 80%;
 }
+#bag.burst {
+  background: url("imgs/bag-burst.png") no-repeat center / 80%;
+}
 #bag-health {
   width: 200px;
   border: 2px solid #000;
