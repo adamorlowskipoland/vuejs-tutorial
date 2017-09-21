@@ -11,8 +11,19 @@
 </head>
 <body>
 
-<div id="vue-app">
+<div id="vue-app-one">
+  <h2>{{ title }}</h2>
+  <button @click="console">Console</button>
+  <p>{{ greet }}</p>
 
+
+</div>
+
+<div id="vue-app-two">
+  <h2>{{ title }}</h2>
+  <button @click="console">Console</button>
+  <p>{{ greet }}</p>
+  <button @click="changeTitle('Title changed')">Change App One Title</button>
 
 
 </div>
