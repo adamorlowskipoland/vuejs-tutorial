@@ -12,18 +12,32 @@
 <body>
 
   <div id="vue-app">
-    <h1>Conditionals</h1>
-    <button v-on:click="error = !error">Toggle Error</button>
-    <button v-on:click="success = !success">Toggle Sucess</button>
-    <!--<p v-if="error">There has been an error</p>-->
-    <!--<p v-else-if="success">Woo, success</p>-->
-    <p v-show="error">There has been an error</p>
-    <p v-show="success">Woo, success</p>
+    <h1>Looping through lists</h1>
+
 
     </div>
 
   </div>
 
-  <script src="app.js"></script>
+  <script>
+    new Vue ({
+      el: '#vue-app',
+      data: {
+        name: 'Jack',
+        characters: ['Mario', 'Luigi', 'Yoshi', 'Bowser'],
+        ninjas: [
+          { name: 'Ryu', age: 25 },
+          { name: 'Yoshi', age: 35 },
+          { name: 'Ken', age: 55 }
+        ]
+      },
+      methods: {
+
+      },
+      computed: {
+
+      }
+    });
+  </script>
 </body>
 </html>
