@@ -11,69 +11,32 @@
 </head>
 <body>
 
-  <div id="vue-app">
-    <h1>Looping through lists</h1>
-    <ul>
-      <li v-for="character of characters">
-        {{ character }}
-      </li>
-    </ul>
+<div id="vue-app">
+  <!--  bag image-->
+  <div id="bag"></div>
 
-    <ol>
-      <li v-for="(ninja, index) in ninjas">
-        {{ index }}. {{ ninja.name }} - {{ ninja.age }}
-      </li>
-    </ol>
-
-    <!--  template tells vue to only take what is inside  -->
-    <template v-for="(ninja, index) in ninjas">
-      <h3>
-        {{ index }} . {{ ninja.name }}
-      </h3>
-      <p>
-        {{ ninja.age }}
-      </p>
-    </template>
-    <!--    -->
-
-    <template>
-      <div  v-for="ninja in ninjas">
-        <p v-for="(val, key) in ninja">
-          {{ key }} - {{ val }}
-        </p>
-      </div>
-    </template>
-
-
-
-    </div>
-
+  <!--  bag health  -->
+  <div id="bag-health">
+    <div></div>
   </div>
 
-  <script>
-    new Vue ({
-      el: '#vue-app',
-      data: {
-        characters: ['Mario', 'Luigi', 'Yoshi', 'Bowser'],
-        ninjas: [
-          {
-            name: 'Ryu', age: 25
-          },
-          {
-            name: 'Yoshi', age: 35
-          },
-          {
-            name: 'Ken', age: 55
-          }
-        ]
-      },
-      methods: {
+  <!--  game controls -->
+  <div id="controls">
+    <button>Punch</button>
+    <button>Restart</button>
+  </div>
 
-      },
-      computed: {
+</div>
 
-      }
-    });
-  </script>
+</div>
+
+<script>
+  new Vue({
+    el: '#vue-app',
+    data: {},
+    methods: {},
+    computed: {}
+  });
+</script>
 </body>
 </html>
