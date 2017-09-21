@@ -13,6 +13,37 @@
 
   <div id="vue-app">
     <h1>Looping through lists</h1>
+    <ul>
+      <li v-for="character of characters">
+        {{ character }}
+      </li>
+    </ul>
+
+    <ol>
+      <li v-for="(ninja, index) in ninjas">
+        {{ index }}. {{ ninja.name }} - {{ ninja.age }}
+      </li>
+    </ol>
+
+    <!--  template tells vue to only take what is inside  -->
+    <template v-for="(ninja, index) in ninjas">
+      <h3>
+        {{ index }} . {{ ninja.name }}
+      </h3>
+      <p>
+        {{ ninja.age }}
+      </p>
+    </template>
+    <!--    -->
+
+    <template>
+      <div  v-for="ninja in ninjas">
+        <p v-for="(val, key) in ninja">
+          {{ key }} - {{ val }}
+        </p>
+      </div>
+    </template>
+
 
 
     </div>
@@ -23,12 +54,17 @@
     new Vue ({
       el: '#vue-app',
       data: {
-        name: 'Jack',
         characters: ['Mario', 'Luigi', 'Yoshi', 'Bowser'],
         ninjas: [
-          { name: 'Ryu', age: 25 },
-          { name: 'Yoshi', age: 35 },
-          { name: 'Ken', age: 55 }
+          {
+            name: 'Ryu', age: 25
+          },
+          {
+            name: 'Yoshi', age: 35
+          },
+          {
+            name: 'Ken', age: 55
+          }
         ]
       },
       methods: {
