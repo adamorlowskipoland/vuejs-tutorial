@@ -20,8 +20,8 @@
   }
 </script>
 
-<style>
-  #app {
-
+<style scoped="">
+  h1 {
+    color: purple;
   }
 </style>
