@@ -35,9 +35,32 @@
       deleteNinja () {
         this.ninjas.pop();
       }
+    },
+//    lifesycle hooks
+    beforeCreate() {
+      alert('beforeCreate')
+    },
+    created() {
+      alert('created')
+//      good for fetching data
+    },
+    beforeMount() {
+      alert('beforeMount')
+    },
+    mounted() {
+      alert('mounted')
+//      good for manipulating the DOM
+    },
+    beforeUpdate() {
+      alert('beforeUpdate')
+    },
+    updated() {
+      alert('updated')
+//      good for manipulating the DOM
     }
   }
 </script>
+
 <style scoped>
   #ninjas {
     width: 100%;
