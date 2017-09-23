@@ -10,6 +10,7 @@
         </h2>
       </li>
     </ul>
+    <button v-on:click="deleteNinja">Delete Ninja</button>
   </div>
 </template>
 
@@ -28,6 +29,11 @@
     data() {
       return {
 
+      }
+    },
+    methods: {
+      deleteNinja () {
+        this.ninjas.pop();
       }
     }
   }
@@ -55,3 +61,5 @@
     margin: 10px;
   }
 </style>
+
+<!--  deleting on ninja from array changes data in every components - refs type data -->

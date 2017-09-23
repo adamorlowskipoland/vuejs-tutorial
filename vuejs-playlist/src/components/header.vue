@@ -1,7 +1,7 @@
 <template>
   <div>
     <header>
-      <h1>
+      <h1 v-on:click="changeTitle">
         {{ title }}
       </h1>
     </header>
@@ -10,9 +10,14 @@
 
 <script>
   export default {
-    data() {
-      return {
-        title: 'Vue Ninjas'
+    props: {
+      title: {
+        type: String
+      }
+    },
+    methods: {
+      changeTitle () {
+        this.title = 'Vue Wizards'
       }
     }
   }
@@ -27,3 +32,5 @@
     text-align: center;
   }
 </style>
+
+<!--  clicking on header changes only header no footer  - primitive type data-->

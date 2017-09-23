@@ -1,8 +1,8 @@
 <template>
   <div>
-    <app-header></app-header>
+    <app-header v-bind:title="title"></app-header>
     <ninjas v-bind:ninjas="ninjas"></ninjas>
-    <appFooter></appFooter>
+    <appFooter v-bind:title="title"></appFooter>
   </div>
 </template>
 
@@ -19,6 +19,7 @@
     },
     data () {
       return {
+        title: 'Vue Ninjas',
         ninjas: [
           {name: 'Ryu', speciality: 'Vue Components', show: false},
           {name: 'Crystal', speciality: 'HTML Wizardry', show: false},

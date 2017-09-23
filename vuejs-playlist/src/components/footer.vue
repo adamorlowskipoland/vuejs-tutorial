@@ -2,7 +2,7 @@
   <div>
     <footer>
       <p>
-        {{ copyrights }}
+        {{ copyrights }} {{ title }}
       </p>
     </footer>
   </div>
@@ -10,9 +10,14 @@
 
 <script>
   export default {
+    props: {
+      title: {
+        type: String
+      }
+    },
     data() {
       return {
-        copyrights: 'Copyright 2017 Vue Ninjas'
+        copyrights: 'Copyright 2017'
       }
     }
   }
