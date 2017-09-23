@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-header v-bind:title="title"></app-header>
+    <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
     <ninjas v-bind:ninjas="ninjas"></ninjas>
     <appFooter v-bind:title="title"></appFooter>
   </div>
@@ -19,7 +19,6 @@
     },
     data () {
       return {
-        title: 'Vue Ninjas',
         ninjas: [
           {name: 'Ryu', speciality: 'Vue Components', show: false},
           {name: 'Crystal', speciality: 'HTML Wizardry', show: false},
@@ -27,7 +26,13 @@
           {name: 'Tango', speciality: 'Conditionals', show: false},
           {name: 'Kami', speciality: 'Webpack', show: false},
           {name: 'Yoshi', speciality: 'Data Diggin', show: false}
-        ]
+        ],
+        title: 'Vue Ninjas'
+      }
+    },
+    methods: {
+      updateTitle (updatedTitle) {
+        this.title = updatedTitle;
       }
     }
   }
