@@ -15,16 +15,19 @@
 
 <script>
   export default {
+//    this is how you receive data
+//    props: ['ninjas'],
+
+//    you can also do it like this, with checking that received props are an Array (they have to be an Array)
+    props: {
+      ninjas: {
+        type: Array,
+        required: true
+      }
+    },
     data() {
       return {
-        ninjas: [
-          {name: 'Ryu', speciality: 'Vue Components', show: false},
-          {name: 'Crystal', speciality: 'HTML Wizardry', show: false},
-          {name: 'Hitoshi', speciality: 'Click Events', show: false},
-          {name: 'Tango', speciality: 'Conditionals', show: false},
-          {name: 'Kami', speciality: 'Webpack', show: false},
-          {name: 'Yoshi', speciality: 'Data Diggin', show: false}
-        ]
+
       }
     }
   }
