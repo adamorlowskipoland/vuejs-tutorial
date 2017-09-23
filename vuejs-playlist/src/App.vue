@@ -1,8 +1,24 @@
 <template>
   <div>
-    <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
-    <ninjas v-bind:ninjas="ninjas"></ninjas>
-    <appFooter v-bind:title="title"></appFooter>
+    <form-helper>
+      <div slot="form-header">
+        <h3>
+          This is the title of the form
+        </h3>
+        <p>
+          Information about form
+        </p>
+      </div>
+      <div slot="form-fields">
+        <input type="text" placeholder="name" required>
+        <input type="password" placeholder="password" required>
+      </div>
+      <div slot="form-controls">
+        <button v-on:click="handleSubmit">
+          Submit
+        </button>
+      </div>
+    </form-helper>
   </div>
 </template>
 
@@ -13,13 +29,11 @@
     components: {
       FormHelper
     },
-    data () {
+    data() {
       return {
-
+        title: 'I am a dynamic slots title'
       }
     },
-    methods: {
-
-    }
+    methods: {}
   }
 </script>
