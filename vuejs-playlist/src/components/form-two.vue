@@ -21,6 +21,16 @@
   export default {
     components: {
       FormHelper
+    },
+    data () {
+      return {
+        counter: 0
+      }
+    },
+    methods: {
+      handleSubmit () {
+        alert('Thank for logging in (form two)')
+      }
     }
   }
 </script>
