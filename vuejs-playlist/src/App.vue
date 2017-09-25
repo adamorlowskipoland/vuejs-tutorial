@@ -1,6 +1,8 @@
 <template>
   <div>
-
+    <component is="form-one"></component>
+<!--  both components display the same now   -->
+    <form-one></form-one>
   </div>
 </template>
 
