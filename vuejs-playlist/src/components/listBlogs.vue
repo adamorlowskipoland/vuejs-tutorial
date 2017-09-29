@@ -1,7 +1,7 @@
 <template xmlns:v-theme="http://www.w3.org/1999/xhtml">
   <div v-theme:column="'narrow'"
        id="show-blogs">
-    <h1>All blog articles</h1>
+    <h1>List Blog Titles</h1>
     <input type="text"
            v-model="search"
            placeholder="search"
