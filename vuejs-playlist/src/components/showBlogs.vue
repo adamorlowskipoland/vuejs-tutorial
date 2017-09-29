@@ -8,7 +8,7 @@
            class="search">
     <div v-for="blog in filteredBlogs"
          class="single-blog">
-      <h2 v-rainbow>{{ blog.title | to-uppercase }}</h2>
+      <h2 v-rainbow>{{ blog.title | toUpperCase }}</h2>
       <article>{{ blog.body | snippet}}</article>
     </div>
   </div>
@@ -33,8 +33,19 @@
       filteredBlogs() {
         return this.blogs.filter((blog) => {
           return blog.title.match(this.search);
-//          return blog.title.contains(this.search);
         })
+      }
+    },
+    filters: {
+      toUpperCase (value) {
+        return value.toUpperCase();
+      }
+    },
+    directives: {
+      rainbow: {
+        bind(el, binding, vnode) {
+          el.style.color = "#" + Math.random().toString().slice(2, 8);
+        }
       }
     }
   }
