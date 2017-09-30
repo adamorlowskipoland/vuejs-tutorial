@@ -8,7 +8,10 @@
            class="search">
     <div v-for="blog in filteredBlogs"
          class="single-blog">
-      <h2 v-rainbow>{{ blog.title | toUpperCase }}</h2>
+      <router-link v-bind:to="'/blog/' + blog.id">
+        <h2>{{ blog.title | toUpperCase }}</h2>
+        <p>{{ blog }}</p>
+      </router-link>
       <article>{{ blog.body | snippet}}</article>
     </div>
   </div>
