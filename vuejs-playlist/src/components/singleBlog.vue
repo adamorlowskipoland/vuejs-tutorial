@@ -4,7 +4,7 @@
       {{ blog.title }}
     </h1>
     <article>
-      content being loaded
+      <h2>Please wait...</h2>
       {{ blog.body }}
     </article>
   </div>
