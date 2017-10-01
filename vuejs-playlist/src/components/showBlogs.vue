@@ -11,7 +11,7 @@
       <router-link v-bind:to="'/blog/' + blog.id">
         <h2>{{ blog.title | toUpperCase }}</h2>
       </router-link>
-      <article>{{ blog.body | snippet}}</article>
+      <article>{{ blog.content | snippet}}</article>
     </div>
   </div>
 </template>
@@ -27,10 +27,17 @@
       }
     },
     created() {
-      this.$http.get('https://jsonplaceholder.typicode.com/posts')
+      this.$http.get('https://vuejs-playlist-5ec67.firebaseio.com/posts.json')
         .then((data) => {
-          this.blogs = data.body.slice(0, 10);
-        })
+          return (data.json());
+        }).then((data) => {
+          const blogsArray = [];
+          for (let key in data) {
+            data[key].id = key;
+            blogsArray.push(data[key]);
+          }
+          this.blogs = blogsArray;
+      })
     },
     filters: {
       toUpperCase (value) {

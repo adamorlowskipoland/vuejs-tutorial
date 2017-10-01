@@ -4,7 +4,17 @@
       {{ blog.title }}
     </h1>
     <article>
-      {{ blog.body }}
+      <p>
+        {{ blog.content }}
+      </p>
+      <p>
+        Author: {{ blog.author }}
+      </p>
+      <ul>
+        <li v-for="category in blog.categories">
+          {{ category }}
+        </li>
+      </ul>
     </article>
   </div>
 </template>
@@ -17,11 +27,13 @@
       }
     },
     created () {
-      this.$http.get('https://jsonplaceholder.typicode.com/posts/' + this.id)
+      this.$http.get('https://vuejs-playlist-5ec67.firebaseio.com/posts/' + this.id + '.json')
         .then((data) => {
-          console.log(data);
-          this.blog = data.body;
-        });
+          return data.json();
+        })
+        .then((data) => {
+          this.blog = data;
+      })
     }
   }
 </script>
