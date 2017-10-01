@@ -49,7 +49,7 @@
     ]
   }
 </script>
-<style>
+<style scoped>
   #show-blogs {
     max-width: 800px;
     margin: 0 auto;
@@ -60,6 +60,10 @@
     margin: 20px 0;
     box-sizing: border-box;
     background: #eee;
+  }
+  a {
+    text-decoration: none;
+    color: #444;
   }
 
   .search {

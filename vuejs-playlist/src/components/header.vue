@@ -15,7 +15,7 @@
   export default {}
 </script>
 
-<style scoper>
+<style scoped>
   nav {
     background: #444;
     padding: 14px 0;

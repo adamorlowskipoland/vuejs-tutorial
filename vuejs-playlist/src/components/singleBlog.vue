@@ -4,7 +4,6 @@
       {{ blog.title }}
     </h1>
     <article>
-      <h2>Please wait...</h2>
       {{ blog.body }}
     </article>
   </div>
@@ -26,7 +25,7 @@
     }
   }
 </script>
-<style>
+<style scoped>
   #single-blog {
     max-width: 960px;
     margin: 0 auto;
